@@ -43,7 +43,7 @@ public class tp1_5 {
         public String mostrar() {
             String x="";
             if(esta_vencida()){
-                x="Vencida";
+                x="(Vencida)... ";
             }
             return x + descripcion;
         }
