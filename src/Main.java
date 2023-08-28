@@ -9,17 +9,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("¿Que ejercicio le gustaria probar?\n 1-Lista Simple.\n 2-Lista Doble.\n 3-Pila.\n 4-Cola.\n 5-Tareas.\n 6-Biblioteca.");
-        int opcion = sc.nextInt();
-        switch (opcion){
-            case 1 -> getListaEnlazadaSimple();
-            case 2 -> getListaEnlazadaDoble();
-            case 3 -> getPila();
-            case 4 -> getCola();
-            case 5 -> getTarea();
-            case 6 -> getBiblioteca();
-            default -> System.out.println("Ingrese una opcion valida.");
-        }
+        int opcion = 0;
+        do {
+            System.out.println("¿Que ejercicio le gustaria probar?\n 0-Finalizar.\n 1-Lista Simple.\n 2-Lista Doble.\n 3-Pila.\n 4-Cola.\n 5-Tareas.\n 6-Biblioteca.");
+            opcion = sc.nextInt();
+            switch (opcion) {
+                case 1 -> getListaEnlazadaSimple();
+                case 2 -> getListaEnlazadaDoble();
+                case 3 -> getPila();
+                case 4 -> getCola();
+                case 5 -> getTarea();
+                case 6 -> getBiblioteca();
+            }
+        }while (opcion != 0);
 
     }
     private static void getListaEnlazadaSimple(){
@@ -35,14 +37,14 @@ public class Main {
 
     }
     private static void getTarea(){
-        tp1_5.Tarea tarea = new tp1_5().new Tarea("Hacer ejercicio", tp1_5.Prioridad.PENDIENTE, false, LocalDate.now().plusDays(3));
+        Tarea tarea = new Tarea("Hacer ejercicio", Tarea.Prioridad.PENDIENTE, false, LocalDate.now().plusDays(3));
 
         System.out.println("Descripción de la tarea: " + tarea.mostrar());
 
         tarea.crear_descripcion("Hacer ejercicio en el gimnasio");
         System.out.println("Nueva descripción de la tarea: " + tarea.mostrar());
 
-        tarea.asignar_prioridad(tp1_5.Prioridad.EN_PROCESO);
+        tarea.asignar_prioridad(Tarea.Prioridad.EN_PROCESO);
         System.out.println("Prioridad de la tarea: " + tarea.obtener_prioridad());
         ;
 
