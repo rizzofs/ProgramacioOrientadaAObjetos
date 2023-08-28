@@ -1,10 +1,12 @@
-public class Tp1 {
+package src;
+
+public class Tp1 <T> {
 
     public class Nodo {
-        int valor;
+        T valor;
         Nodo siguiente;
 
-        public Nodo(int valor) {
+        public Nodo(T valor) {
             this.valor = valor;
             this.siguiente = null;
         }
@@ -28,7 +30,7 @@ public class Tp1 {
             return longitud;
         }
 
-        public void agregarElemento(int valor) {
+        public void agregarElemento(T valor) {
             Nodo nuevoNodo = new Nodo(valor);
             if (cabeza == null) {
                 cabeza = nuevoNodo;
@@ -42,7 +44,7 @@ public class Tp1 {
             longitud++;
         }
 
-        public void eliminarElemento(int valor) {
+        public void eliminarElemento(T valor) {
             if (cabeza == null) {
                 return;
             }
@@ -61,7 +63,7 @@ public class Tp1 {
             }
         }
 
-        public int recuperarElemento(int posicion) {
+        public T recuperarElemento(int posicion) {
             if (posicion < 0 || posicion >= longitud) {
                 throw new IndexOutOfBoundsException("Posición inválida");
             }
@@ -72,7 +74,7 @@ public class Tp1 {
             return actual.valor;
         }
 
-        public void insertarElemento(int valor, int posicion) {
+        public void insertarElemento(T valor, int posicion) {
             if (posicion < 0 || posicion > longitud) {
                 throw new IndexOutOfBoundsException("Posición inválida");
             }
