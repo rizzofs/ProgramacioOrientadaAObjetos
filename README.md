@@ -1,8 +1,12 @@
-# Programacion Orientada A Objetos
+# Programación Orientada a Objetos
 
-Integrantes
+## Integrantes
 
-Nombre y Apellido: Federico Rizzo, Leg: 179404
-Nombre y Apellido: Eliana Cardona , Leg: 
-Nombre y Apellido: Tomas Talucci, Leg: 
+- Nombre y Apellido: Federico Rizzo
+  - Legajo: 179404
 
+- Nombre y Apellido: Eliana Cardona
+  - Legajo: 
+
+- Nombre y Apellido: Tomas Talucci
+  - Legajo: 
