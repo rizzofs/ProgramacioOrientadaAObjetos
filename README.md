@@ -8,5 +8,5 @@
 - Nombre y Apellido: Eliana Cardona
   - Legajo: 
 
-- Nombre y Apellido: Tomas Talucci
-  - Legajo: 
+- Nombre y Apellido: Tomás Talucci
+  - Legajo: 188025
