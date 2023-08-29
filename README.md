@@ -1,6 +1,6 @@
 # Programacion Orientada A Objetos
 
-##Integrantes
+Integrantes
 
 Nombre y Apellido: Federico Rizzo, Leg: 179404
 Nombre y Apellido: Eliana Cardona , Leg: 
