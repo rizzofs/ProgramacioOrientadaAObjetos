@@ -37,25 +37,40 @@ public class Main {
 
     }
     private static void getTarea(){
-        Tarea tarea = new Tarea("Hacer ejercicio", Tarea.Prioridad.PENDIENTE, false, LocalDate.now().plusDays(3));
+        Tarea tarea = new Tarea("Ir al super", Tarea.Prioridad.PENDIENTE, false, LocalDate.now().plusDays(3));
 
         System.out.println("Descripción de la tarea: " + tarea.mostrar());
 
-        tarea.crear_descripcion("Hacer ejercicio en el gimnasio");
+        tarea.crear_descripcion("Ir al supermercado mañana");
         System.out.println("Nueva descripción de la tarea: " + tarea.mostrar());
 
         tarea.asignar_prioridad(Tarea.Prioridad.EN_PROCESO);
         System.out.println("Prioridad de la tarea: " + tarea.obtener_prioridad());
         ;
 
-        tarea.fecha_limite(LocalDate.now().plusDays(2));
+        tarea.fecha_limite(LocalDate.now().plusDays(1));
         System.out.println("Fecha límite de la tarea: " + tarea.obtener_fecha());
 
 
-        tarea.Esta_finalizada(true);
+        tarea.Esta_finalizada(false);
         System.out.println("¿La tarea está completa? " + tarea.esCompleta());
 
         System.out.println("¿La tarea está vencida? " + tarea.esta_vencida());
+
+        Tarea tarea2 = new Tarea("Consultar repuestos del auto", Tarea.Prioridad.COMPLETADO, true,LocalDate.now().plusDays(-1));
+        System.out.println("Descripción de la tarea: " + tarea2.mostrar());
+        System.out.println("Prioridad de la tarea: " + tarea2.obtener_prioridad());
+        System.out.println("Fecha límite de la tarea: " + tarea2.obtener_fecha());
+        System.out.println("¿La tarea está completa? " + tarea2.esCompleta());
+        System.out.println("¿La tarea está vencida? " + tarea2.esta_vencida());
+
+        Tarea tarea3 = new Tarea("Ir al cine a ver la nueva película de Marvel", Tarea.Prioridad.PENDIENTE, false,LocalDate.now().plusDays(-1));
+        System.out.println("Descripción de la tarea: " + tarea3.mostrar());
+        System.out.println("Prioridad de la tarea: " + tarea3.obtener_prioridad());
+        System.out.println("Fecha límite de la tarea: " + tarea3.obtener_fecha());
+        System.out.println("¿La tarea está completa? " + tarea3.esCompleta());
+        System.out.println("¿La tarea está vencida? " + tarea3.esta_vencida());
+
     }
 
     private static void getBiblioteca(){
