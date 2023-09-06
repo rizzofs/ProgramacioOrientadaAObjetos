@@ -8,5 +8,17 @@ public class Jugador {
         this.usuario = usuario;
     }
 
+    public String getNombre(){
+        return this.usuario;
+    }
+
+    public int getPuntaje(){
+        return this.puntaje;
+    }
+
+    public void setPuntaje(int puntaje){
+        this.puntaje= puntaje;
+    }
+
 
 }

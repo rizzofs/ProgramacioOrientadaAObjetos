@@ -86,5 +86,6 @@ public class Main {
         biblioteca.prestarLibro(libro2);
         biblioteca.masPaginas(libro1,libro2);
         System.out.println("La cantidad total de libros prestados es de: " + biblioteca.getLibrosPrestados());
+
     }
 }
