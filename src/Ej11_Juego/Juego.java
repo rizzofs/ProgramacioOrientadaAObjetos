@@ -8,15 +8,22 @@ public class Juego {
     private int puntaje;
     private ArrayList<String> diccionario;
 
+
     public Juego() {
-        String usuario1 = null;
-        String usuario2 = null;
-        listaJugadores.add(new Jugador(usuario1));
-        listaJugadores.add(new Jugador(usuario2));
+        ArrayList<Jugador> listaJugadores= new ArrayList<>();
+        ArrayList<String> diccionario =new ArrayList<>();
+        String usuario1 = "Jugador 1";
+        String usuario2 = "Jugador 2";
+        Jugador usuario =new Jugador(usuario1);
+        Jugador usuarioB =new Jugador(usuario2);
+        listaJugadores.add(usuario);
+        listaJugadores.add(usuarioB);
     }
 
-    public void agregarPalabraValida(String palabraValida){
-        diccionario.add(palabraValida);
+    public void agregarPalabraValida(String palabraValida) {
+
+        ArrayList<String> diccionario =new ArrayList<>();
+        this.diccionario.add(palabraValida);
     }
 
     public boolean validarPalabra(String palabra){
@@ -81,4 +88,5 @@ public class Juego {
 
         }
     }
+
 }
