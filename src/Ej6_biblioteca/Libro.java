@@ -1,5 +1,7 @@
 package src.Ej6_biblioteca;
 
+import src.ListaEnlazada;
+
 public class Libro {
     private String titulo;
     private String autor;
@@ -13,6 +15,9 @@ public class Libro {
         this.cantidad_paginas = cantidad_paginas;
         this.cantidadStock = 1;
         this.cantidadTotal = 1;
+    }
+
+    public Libro(String elLibroDeAventuras, String autorA, int cantidadPaginas, ListaEnlazada<Object> objectListaEnlazada) {
     }
 
     public void aumentarCantidad(int cantidadAAumentar){

@@ -25,9 +25,10 @@ public class Prestamo {
     }
 
     public void finalizar(){
-       if (this.getFechaDevolucion().isAfter(LocalDate.now())){
-           System.out.println("Prestamo finalizado- Pedir el libro " );
+        if (this.getFechaDevolucion().isAfter(LocalDate.now())){
+            System.out.println("El préstamo ha sido finalizado.");
+        } else {
+            System.out.println("El préstamo ya ha vencido.");
         }
     }
-
 }

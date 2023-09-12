@@ -42,7 +42,7 @@ public class Biblioteca {
         Libro libro1;
         for (int i = 0; i < longitudLista; i++){
             libro1 = listaDeLibros.recuperarElemento(i);
-            if (libro1.getTitulo() == titulo && libro1.getAutor() == autor){
+            if (libro1.getTitulo().equals(titulo) && libro1.getAutor().equals(autor)){
                 return libro1;
             }
         }
@@ -53,5 +53,21 @@ public class Biblioteca {
     }
     public int getLibrosPrestados(){
         return librosPrestados;
+    }
+
+    public void mostrarDescripcion(String titulo, String autor) {
+        // Buscar el libro en la lista de libros
+        Libro libroBuscado = buscarLibro(titulo, autor);
+
+        if (libroBuscado != null) {
+            System.out.println("Información del libro:");
+            System.out.println("Título: " + libroBuscado.getTitulo());
+            System.out.println("Autor: " + libroBuscado.getAutor());
+            System.out.println("Cantidad de páginas: " + libroBuscado.getCantidad_paginas());
+            System.out.println("Cantidad en stock: " + libroBuscado.getCantidadStock());
+            System.out.println("Cantidad total: " + libroBuscado.getCantidadTotal());
+        } else {
+            System.out.println("El libro no se encuentra en la biblioteca.");
+        }
     }
 }

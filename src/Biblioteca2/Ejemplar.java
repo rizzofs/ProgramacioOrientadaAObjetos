@@ -6,20 +6,27 @@ public class Ejemplar {
     private Libro libroQuePertenece;
 
     public boolean prestar() {
-        if (libroQuePertenece.getCantidadStock() + 1 <= libroQuePertenece.getCantidadTotal()) {
-            libroQuePertenece.setCantidadStock(libroQuePertenece.getCantidadStock()+1);
+        int cantidadStock = libroQuePertenece.getCantidadStock();
+        int cantidadTotal = libroQuePertenece.getCantidadTotal();
+        if (cantidadStock + 1 <= cantidadTotal) {
+            libroQuePertenece.setCantidadStock(cantidadStock + 1);
             return true;
-        } else
+        } else {
             return false;
+        }
     }
 
+
     public boolean devolver() {
-        if (libroQuePertenece.getCantidadStock() > 0) {
-            libroQuePertenece.setCantidadStock(libroQuePertenece.getCantidadStock()-1);
+        int cantidadStock = libroQuePertenece.getCantidadStock();
+        if (cantidadStock > 0) {
+            libroQuePertenece.setCantidadStock(cantidadStock - 1);
             return true;
-        } else
+        } else {
             return false;
+        }
     }
+
 
 
 }

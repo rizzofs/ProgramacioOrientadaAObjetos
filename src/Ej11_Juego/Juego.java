@@ -20,9 +20,10 @@ public class Juego {
         listaJugadores.add(usuarioB);
     }
 
-    public void agregarPalabraValida(String palabraValida) {
+    public void agregarPalabraValida() {
 
         ArrayList<String> diccionario =new ArrayList<>();
+        String palabraValida = null;
         this.diccionario.add(palabraValida);
     }
 
