@@ -1,4 +1,4 @@
-package src.TP2;
+package src.TP2.Ej_9;
 
 public class Cuadrado extends DosDimensiones{
     private double base;

@@ -1,4 +1,4 @@
-package src.TP2;
+package src.TP2.Ej_9;
 
 abstract public class TresDimensiones extends Figura {
 

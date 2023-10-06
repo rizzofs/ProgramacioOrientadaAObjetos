@@ -1,4 +1,4 @@
-package src.TP2;
+package src.TP2.Ej_9;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
